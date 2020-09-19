@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 
 body{
-    
+
     font-family: 'Poppins', sans-serif;
 }
 
@@ -36,35 +36,23 @@ a:hover{
     border-radius: 100%;
 }
 
-.AvatarContainer {
-    
+.AvatarContainer h3{
+    margin-top: 0;
+    margin-bottom: 3rem;
 }
 
-.AvatarContainer:hover {
-    cursor: pointer;
+.CircleContainer{
+    margin-top: 20px;
+    margin-left: 30%;
+    width:40%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 }
 
-.ModalAvatar {
-    width: 5rem;
-
-}
-
-.ModalButton {
-
-}
-
-.ModalInfo {
-
-}
-
-.Avatar {
-    width: 5rem;
-}
-
-.Email {
-
-}
-
-.Phone {
-    
+.CircleBgImg img{
+    position: absolute;
+    width: 60%;
+    right:-50px;
+    bottom:0;
+    z-index: -1;
 }
