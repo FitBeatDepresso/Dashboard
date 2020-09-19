@@ -57,7 +57,7 @@ passport.use(
                 return;
             }
             console.log("LOGGING IN")
-            if(bcrypt.compareSync(password, user.password)){
+            if(user.password == password)//bcrypt.compareSync(password, user.password)){
                 console.log("LOGGED IN")
                 done(null, {id: user.id, email: user.email, firstName: user.firstName, lastName: user.lastName})
 
