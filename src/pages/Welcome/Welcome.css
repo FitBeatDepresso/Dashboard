@@ -18,11 +18,7 @@ body{
     flex-direction: column;
     align-items: center;
     margin-left: 55%;
-   
-    
-    
 }
-
 
 
 .Info a{
@@ -88,4 +84,12 @@ body{
     font-weight: 600;
     font-size: .9rem;
 
+}
+
+.Manual:hover {
+    cursor:pointer;
+} 
+
+.TextInput {
+    
 }
