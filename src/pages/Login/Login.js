@@ -5,14 +5,14 @@ import { Button, InputLabel, Input } from '@material-ui/core';
 import FormControl from '@material-ui/core/FormControl';
 
 import { useDispatch } from 'react-redux';
-import { loginRequested } from "slices/accessSlice";
+import { loginRequested, loginRequestedu } from "../../slices/accessSlice";
 
 
 import './Login.css';
 
 //Assets
-import headerTitle from 'assets/img/landingPage/headerTitle.png';
-// import phoneImg from 'assets/img/loginPage/phone.png';
+import headerTitle from '../../assets/img/landingPage/headerTitle.png';
+import phoneImg from '../../assets/img/loginPage/watch.png';
 
 
 const Login = (props) => {
@@ -31,20 +31,20 @@ const Login = (props) => {
 
             <div className="Form">
             <h1> Sign In </h1>
-
-                <FormControl>
-
-                    <Input id="my-input" placeholder="Email" aria-describedby="my-helper-text" onChange={(evt) => setEmail(evt.target.value)} />
+            
+                <FormControl className="FormControl">
+                    
+                    <input id="my-input" placeholder="Email" aria-describedby="my-helper-text" onChange={(evt) => setEmail(evt.target.value)} />
                 </FormControl>
-                <FormControl>
-
-                    <Input id="my-input" placeholder="Password" aria-describedby="my-helper-text" onChange={(evt) => setPassword(evt.target.value)} />
+                <FormControl className="FormControl">
+                    
+                    <input type="password"id="my-input" placeholder="Password" aria-describedby="my-helper-text" onChange={(evt) => setPassword(evt.target.value)} />
                 </FormControl>
 
 
                 <div className="Button">
                     <Button color="primary" onClick={loginHandler}> Sign In </Button>
-                    <Button color="primary" > Connect with Fitbit account </Button>
+                    <Button color="primary" > Connect with Fitbit</Button>
                 </div>
 
                 <h2> Don't have an account?
@@ -54,9 +54,9 @@ const Login = (props) => {
                 </h2>
             </div>
 
-            {/* <div className="PhoneContainer">
+            <div className="PhoneContainer"> 
                 <img className="Img" src={phoneImg}/>
-            </div> */}
+            </div>
         </div>
     );
 }

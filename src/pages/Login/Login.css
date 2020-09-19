@@ -1,26 +1,76 @@
+/* body{
+    overflow: visible;
+} */
+
 .Form {
     position: relative;
-
     display: flex;
     flex-direction: column;
     width: 70%;
     float: right;
     height: 100vh;
+    align-items: center;
+    margin-top: 3rem;
+    
     /* justify-content: space-around; */
 }
 
-.Form Input{
+.Form input{
    background: #f0f0f0;
    height: 50px;
    border-radius: 50px;
    padding: 0 1.5rem;
-   margin: 1rem 3rem;
+   margin: .7rem 3rem;
+   border: none;
+   outline: none;
+   font-family: 'Poppins', sans-serif;
+   font-weight: 500;
+   font-size: 1.2rem;
 }
-.Button {
+
+.Form h1{
+    font-size: 3.5rem;
+}
+
+.FormControl{
+    width: 60%;
+}
+.Form input::placeholder{
+    font-weight: 300;
+    font-size: 1rem;
+    color: #aaa;
+
+}
+.Button Button{
+    color: #fff;
+    background-color: #DE1645;
+    border-radius: 50px;
+    width: 250px;
+    height: 60px;
+    margin: 3rem 1rem;
+    text-transform: none;
+    font-family: 'Poppins', sans-serif;
+   font-weight: 600;
+   font-size: 1.2rem;
+    
+}
+.Button Button:hover{
+    color: #DE1645;
+    background: #fff;
+}
+.Form h2{
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+.Form a{
+    text-decoration: none;
+    color: #FF8E10;
     
 }
 
-
+.Form a:hover{
+    color: #db7e14;
+}
 
 
 .HeaderTitle{
@@ -29,4 +79,12 @@
     top: 0;
     left: 0;
     width: 12rem;
+}
+
+.PhoneContainer img{
+    position: absolute;
+    width: 25vw;
+    left:70px;
+    bottom:50px;
+
 }
