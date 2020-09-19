@@ -1,0 +1,99 @@
+.Container {
+    position: fixed;
+    top: 50%;
+    z-index: 500;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 71%;
+    height: 500px;
+    background: #ffffff;
+    font-family: "Rasa", serif;
+    color: #00344b;
+  }
+  
+  .ImgContainer {
+    width: 60%;
+    height: 80%;
+    float: left;
+  }
+  .Img {
+    width: 100%;
+    height: 125%;
+  }
+  .Container > h3,
+  .Container > h4 {
+    text-transform: uppercase;
+    margin: 0.2rem 0.2rem;
+    text-align: center;
+  }
+  .BtnContainer {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+  .BackButton,
+  .CartBtn {
+    color:white;
+    width: 10rem;
+    padding: 0.5rem 0.5rem;
+    margin-top: 0.5rem;
+    text-transform: uppercase;
+    font-size: 1rem;
+    background: #4c39d8;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    outline: none;
+  }
+  .BackButton:hover,
+  .CartBtn:hover {
+    background: white;
+    color: #4c39d8;
+  }
+  
+  .CloseBtn {
+    float: right;
+    margin-right: 1rem;
+    size: 10px;
+    text-align: right;
+    cursor: pointer;
+  }
+  
+  .Content {
+    float: right;
+    width: 33.3%;
+  }
+  
+  .Title {
+    color: #00344b;
+    text-align: left;
+    margin-bottom: -1rem;
+    font-size: 2.0rem;
+    font-family: 'Montserrat', Sans-serif;
+    font-weight: bold;
+  }
+  .Tag {
+    color: #808080;
+    font-size: 1.1rem;
+    font-family: "Arial", serif;
+    font-weight: normal;
+  }
+  .Price {
+    color: #4c39d8;
+    font-size: 2.5rem;
+    justify-self: left;
+    font-weight: bolder;
+    margin-bottom: 0rem;
+  }
+  
+  .Description {
+    margin-bottom: -1rem;
+  }
+  
+  .InfoContainer {
+    max-height: 200px;
+  }
+  
+  .PriceTag{
+    margin-bottom: -3rem;
+  }
