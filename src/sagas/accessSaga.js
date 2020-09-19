@@ -1,16 +1,31 @@
 import { put, call, takeLatest } from 'redux-saga/effects';
 import Cookies from 'js-cookie';
 import {post, get} from '../utils/api';
-import {loginFailed, loginRequested, logoutSucceeded, logoutRequested, profileSucceeded, profileFailed, logoutFailed, profileRequested, loginSucceeded, signupRequested, signupFailed, signupSucceeded} from '../slices/accessSlice';
+import {
+    loginFailed,
+    loginRequested,
+    logoutSucceeded,
+    logoutRequested,
+    profileSucceeded,
+    profileFailed,
+    logoutFailed,
+    profileRequested,
+    loginSucceeded,
+    signupRequested,
+    signupFailed,
+    signupSucceeded,
+    getConnectionsSucceeded,
+    getConnectionsRequested, addConnectionRequested
+} from '../slices/accessSlice';
 import {url} from '../utils/config';
 import lGet from 'lodash/get';
 function* signup(action){
-    const {email, password, firstName, lastName} = action.payload;
+    const {email, password, fullName} = action.payload;
     try {
         const response = yield call(
             post,
             `${url}/auth/local/signup`,
-            {email, password, firstName, lastName}
+            {email, password, fullName}
         );
         const inOneWeek = new Date(new Date().getTime() + (1000 * 60 * 60 * 24 * 7));
         Cookies.set('auth__flow__fitbeatdepresso__loggedUserObj', response.data, {expires: inOneWeek});
@@ -73,4 +88,44 @@ function* logout() {
 
 export function* watchLogout() {
     yield takeLatest(logoutRequested.toString(), logout);
+}
+
+function* getConnections() {
+    try {
+        const response = yield call(get, `${url}/getConnections`);
+        yield put(getConnectionsSucceeded(response.connections));
+    } catch (error) {
+        console.log(error)
+        console.log("ERRRRRROR")
+        if(lGet(error.response, 'data')) {
+            yield put(logoutFailed(error.response.data));
+        } else {
+            yield put(logoutFailed(error.response));
+        }
+    }
+}
+
+export function* watchGetConnections() {
+    yield takeLatest(getConnectionsRequested.toString(), getConnections);
+}
+
+function* addConnection(action) {
+    try {
+        const {email} = action.payload;
+
+        yield call(post, `${url}/addConnection`, {email});
+        console.log("SUCCEEDED")
+    } catch (error) {
+        console.log("ERROR AddConnection")
+        console.log(error)
+        if(lGet(error.response, 'data')) {
+            yield put(logoutFailed(error.response.data));
+        } else {
+            yield put(logoutFailed(error.response));
+        }
+    }
+}
+
+export function* watchAddConnection() {
+    yield takeLatest(addConnectionRequested.toString(), addConnection);
 }

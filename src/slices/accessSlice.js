@@ -7,7 +7,7 @@ const accessSlice = createSlice({
         user: {
             isAuthenticated: typeof Cookies.get('auth__flow__fitbeatdepresso__loggedUserObj') !== 'undefined',
             loggedUserObj: Cookies.getJSON('auth__flow__fitbeatdepresso__loggedUserObj'),
-            picture: {},
+            connections: [],
         },
         error: null,
     },
@@ -47,6 +47,9 @@ const accessSlice = createSlice({
         signupFailed(state, action) {
             state.error = action.payload
         },
+        getConnectionsSucceeded(state, action){
+            state.connections = action.payload;
+        }
         // getStudentPicturesSucceeded(state, action){
         //     state.user.picture = action.payload
         // },
@@ -57,8 +60,10 @@ export const loginRequested = createAction('login/requested');
 export const logoutRequested = createAction('logout/requested');
 export const profileRequested = createAction('profile/requested');
 export const signupRequested = createAction('signup/requested');
+export const getConnectionsRequested = createAction('connections/getRequested');
+export const addConnectionRequested = createAction('connections/addRequested');
 
-export const { loginSucceeded, loginFailed, profileSucceeded, profileFailed, logoutSucceeded, logoutFailed, signupSucceeded, signupFailed} = accessSlice.actions
+export const { loginSucceeded, loginFailed, profileSucceeded, profileFailed, logoutSucceeded, logoutFailed, signupSucceeded, signupFailed, getConnectionsSucceeded} = accessSlice.actions
 
 export const authenticationStatus = state => state.access.user.isAuthenticated;
 

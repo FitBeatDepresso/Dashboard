@@ -2,7 +2,8 @@ import React, { Component, useState } from 'react';
 
 import { NavLink } from "react-router-dom";
 
-import './Circle.css'; 
+import './Circle.css';
+
 
 import { Avatar, Button } from '@material-ui/core';
 import Modal from 'react-modal'; 
@@ -41,6 +42,7 @@ const Circle = (props) => {
 
     return (
         <div>
+<<<<<<< HEAD
             <h1> Your Circle </h1>
             <a> Invite friends </a>
 
@@ -93,11 +95,45 @@ const Circle = (props) => {
                 <div className="AvatarContainer" onClick={openModal}> 
                     <img className="Avatar" src={avatar_4}/>
                     <h1> Name </h1>
+=======
+           
+            <h1 style={{marginBottom: "0"}}> Your Circle </h1>
+            <NavLink style={{textDecoration: "none"}} to="/inviteFriends">
+                <a> Invite friends </a>
+            </NavLink>
+
+            <div className="CircleContainer">
+                <div className="AvatarContainer">
+                    <a href="#">
+                    <img style={{background: "#A2EF8E"}} src={avatar_1}/>
+                    <h3> Name </h3>
+                    </a>
+                </div>
+
+                <div className="AvatarContainer">
+                    <img style={{background: "#F7ED99"}} src={avatar_2}/>
+                    <h3> Name </h3>
+                </div>
+
+                <div className="AvatarContainer">
+                    <img style={{background: "#FF5A5A"}} src={avatar_3}/>
+                    <h3> Name </h3>
+                    {/* <h3> It looks like "" may not be doing well today <a href="#"> Reach out? </a> </h3> */}
+                </div>
+
+                <div className="AvatarContainer">
+                    <img style={{background: "#A2EF8E"}} src={avatar_4}/>
+                    <h3> Name </h3>
+>>>>>>> 4047d0fbf411bbfcb66058a2c0e3d6e567295014
                 </div>
 
             </div>
-            <img src={circleImg}/> 
+            <div className="CircleBgImg">
+            <img src={circleImg}/>
+            </div>
         </div>
+
+    
     );
 }
 
