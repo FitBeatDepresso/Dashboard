@@ -1,7 +1,58 @@
-.CircleContainer {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
 
+body{
+    
+    font-family: 'Poppins', sans-serif;
 }
 
-.AvatarContainer {
-    
+h1{
+    font-weight: 700;
+    font-size: 4rem;
+}
+a{
+    color: #DE1645;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.AvatarContainer a{
+    color: #000;
+}
+
+.AvatarContainer a:hover{
+    color: #444;
+}
+
+a:hover{
+    color: #f25a7d;
+}
+.CircleContainer {
+    position: relative;
+    width: 100%;
+}
+
+.AvatarContainer img{
+    width: 10rem;
+    border-radius: 100%;
+}
+
+.AvatarContainer h3{
+    margin-top: 0;
+    margin-bottom: 3rem;
+}
+
+.CircleContainer{
+    margin-top: 20px;
+    margin-left: 30%;
+    width:40%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.CircleBgImg img{
+    position: absolute;
+    width: 60%;
+    right:-50px;
+    bottom:0;
+    z-index: -1;
 }
