@@ -124,6 +124,18 @@ app.get('/auth/fitbit/callback', passport.authenticate('fitbit', {
     failureRedirect: '/',
 }))
 
+app.post('/auth/local/login',
+    passport.authenticate('local', { failureRedirect: '/login' }),
+    function(req, res) {
+        res.redirect('/');
+});
+
+app.post('/auth/local/signup',
+    passport.authenticate('local.signup', { failureRedirect: '/signup' }),
+    function(req, res) {
+        res.redirect('/');
+    });
+
 // if (process.env.NODE_ENV === "production") {
 //     app.use(express.static(path.join(__dirname, '../client/build')));
 //     app.get('/', function(req, res) {
