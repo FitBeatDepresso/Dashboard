@@ -1,9 +1,8 @@
-import React, {Component, useEffect} from 'react';
+import React, {Component, useEffect, useState} from 'react';
 
 import { NavLink } from "react-router-dom";
 
 import './Circle.css';
-
 
 import { Avatar, Button } from '@material-ui/core';
 import Modal from 'react-modal';
@@ -31,15 +30,15 @@ const customStyles = {
 
 const Circle = (props) => {
 
-    const [modalOpen, setModal] = useState(false);
-
+    const [modalOpen, setModal] = useState(false); 
+    
 
     const openModal = () => {
         setModal(true);
     }
 
-    const closeModal = () => {
-        setModal(false);
+    const closeModal = () => { 
+        setModal(false); 
     }
 
     const connections = useSelector(state => state.access.connections);
