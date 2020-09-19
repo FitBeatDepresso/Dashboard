@@ -5,12 +5,12 @@ import {loginFailed, loginRequested, logoutSucceeded, logoutRequested, profileSu
 import {url} from '../utils/config';
 import lGet from 'lodash/get';
 function* signup(action){
-    const {email, password, firstName, lastName} = action.payload;
+    const {email, password, fullName} = action.payload;
     try {
         const response = yield call(
             post,
             `${url}/auth/local/signup`,
-            {email, password, firstName, lastName}
+            {email, password, fullName}
         );
         const inOneWeek = new Date(new Date().getTime() + (1000 * 60 * 60 * 24 * 7));
         Cookies.set('auth__flow__fitbeatdepresso__loggedUserObj', response.data, {expires: inOneWeek});
