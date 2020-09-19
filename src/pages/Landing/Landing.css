@@ -1,12 +1,64 @@
-.Text {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+
+
+.Container{
+    position: relative;
+}
+
+.Text{
+    position: relative;
     text-align: left;
-    float: left;
+    font-family: 'Poppins', sans-serif;
+    width: 60%;
+    margin: 12rem 3rem;
+   
+   
 }
 
-.ImageContainer {
-    float: right;
-}
-
-.Img {
+.Text h1{
+    font-size: 5rem;
+    font-weight: 800;
     
+
+}
+
+.Text h4{
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-top: -6%;
+    width: 70%;
+}
+ 
+
+.Text Button{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    color: #fff;
+    background: linear-gradient(90deg, #DE1645, #FF8E10);
+    border-radius: 360px;
+    padding: .5rem 1.8rem;
+    letter-spacing: .1px;
+    text-transform: capitalize;
+}
+
+
+
+Header img{
+    position: absolute;
+    margin: 2rem 3rem;
+    top: 0;
+    left: 0;
+    width: 12rem;
+}
+
+
+.ImageContainer img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 55%;
+    z-index: -1;
 }
