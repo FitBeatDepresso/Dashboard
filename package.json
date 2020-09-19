@@ -1,0 +1,19 @@
+{
+  "name": "fitbeatdepresso",
+  "version": "1.0.0",
+  "description": "A platform that helps predict and check your loved ones' mental health with Fitbit API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chrislevn/FitBeatDepresso.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chrislevn/FitBeatDepresso/issues"
+  },
+  "homepage": "https://github.com/chrislevn/FitBeatDepresso#readme"
+}
