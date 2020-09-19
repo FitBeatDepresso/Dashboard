@@ -4,7 +4,7 @@
   "description": "A platform that helps predict and check your loved ones' mental health with Fitbit API",
   "main": "/server/index.js",
   "scripts": {
-    "start": "node ./server/index.js",
+    "start": "npm run build --prefix ./client && node ./server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
