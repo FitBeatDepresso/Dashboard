@@ -34,7 +34,7 @@ const Login = (props) => {
             
                 <FormControl>
                     
-                    <Input id="my-input"underlineColorAndroid='transparent' placeholder="Email" aria-describedby="my-helper-text" onChange={(evt) => setEmail(evt.target.value)} />
+                    <Input id="my-input" placeholder="Email" aria-describedby="my-helper-text" onChange={(evt) => setEmail(evt.target.value)} />
                 </FormControl>
                 <FormControl>
                     
