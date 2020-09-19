@@ -66,3 +66,20 @@ Header img{
     width: 55%;
     z-index: -1;
 }
+
+.Footer { 
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 6%;
+    background-color: #FF8E10;
+    color: white;
+    text-align: center;
+    justify-content: center;
+}
+
+.FooterText { 
+    color: white;
+    text-align: center;
+}

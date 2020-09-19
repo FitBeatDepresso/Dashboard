@@ -23,7 +23,9 @@ const App = (props) => {
         <Switch>
           <Route path="/" exact component={Landing} />
           <Route path="/welcome" component={Welcome} />
-          <Route path="/login" render={() => isAuthenticated ? <Redirect to={'/circle'}/> : <Login/>} />
+          <Route path="/login" component={Login} />
+          <Route path="/circle" component={Circle}/>
+          {/* <Route path="/login" render={() => isAuthenticated ? <Redirect to={'/circle'}/> : <Login/>} /> */}
           <Route path="/signup" render={() => isAuthenticated ? <Redirect to={'/circle'}/> : <SignUp/>}/>
           <ProtectedRoute path="/circle" component={Circle} />
         </Switch>

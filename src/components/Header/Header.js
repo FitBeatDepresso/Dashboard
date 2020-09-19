@@ -13,7 +13,9 @@ const Header = (props) => {
     return (
         <header className="Header">
            <nav className="Navigation">
-                <img className="HeaderLogo" src={headerTitle} />
+                <NavLink to="/"> 
+                    <img className="HeaderLogo" src={headerTitle} />
+                </NavLink> 
                 <div className="Right" style={{ position: "absolute", top: "0", right: "0", margin: "1.5rem 3rem" }}> 
                     <NavLink style={{textDecoration: "none"}} to="/login"> 
                         <Button color="primary" style={{color: "#DE1645", textTransform: "capitalize", fontWeight: "bold", background:"transparent", border: "3px solid #DE1645", borderRadius: "50px", width:"8rem"}}> Login </Button>

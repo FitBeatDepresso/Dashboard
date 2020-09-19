@@ -27,6 +27,14 @@ const Landing = (props) =>{
                     <img className="Img" src={landingImg}/>
                 </div>
             </div>
+
+            <div className="Footer"> 
+                <h4 className="FooterText"> Shout out to 
+                <a href=""> Ian </a>,
+                <a href=""> Ayana </a>, and 
+                <a href=""> Kevin </a> for making this project come true - 
+                <a href=""> Chris </a></h4>
+            </div>
         </div>
     );
 }

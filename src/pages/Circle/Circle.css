@@ -5,3 +5,32 @@
 .AvatarContainer {
     
 }
+
+.AvatarContainer:hover {
+    cursor: pointer;
+}
+
+.ModalAvatar {
+    width: 5rem;
+
+}
+
+.ModalButton {
+
+}
+
+.ModalInfo {
+
+}
+
+.Avatar {
+    width: 5rem;
+}
+
+.Email {
+
+}
+
+.Phone {
+    
+}
