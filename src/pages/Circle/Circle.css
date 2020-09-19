@@ -56,3 +56,56 @@ a:hover{
     bottom:0;
     z-index: -1;
 }
+
+.Modal{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    padding: 20px;
+
+}
+
+
+.ModalInfo{
+    display: flex;
+    flex-direction: column;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.ModalInfo h1{
+    margin: 0;
+}
+.AvatarContainer:hover {
+    cursor: pointer;
+}
+
+.ModalAvatar {
+    position: relative;
+    width: 15rem;
+    height: 15rem;
+
+}
+
+.ModalButton {
+
+}
+
+.ModalInfo {
+
+}
+
+.Avatar {
+    width: 5rem;
+
+}
+
+.Email {
+
+}
+
+.Phone {
+
+}
