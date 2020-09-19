@@ -64,22 +64,37 @@ a:hover{
     align-items: center;
     border: none;
     padding: 20px;
+    height: 100%;
    
 }
 
 
+
 .ModalInfo{
+    position: relative;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-direction: column;
     padding-right: 50px;
     padding-left: 50px;
+    height: 60%;
 }
 
 .ModalInfo h1{
     margin: 0;
+    font-size: 3rem;
 }
 .AvatarContainer:hover {
     cursor: pointer;
+}
+
+.ModalInfo a{
+    color: #000;
+}
+
+.ModalInfo a:hover{
+    color: #777;
 }
 
 .ModalAvatar {
@@ -104,19 +119,40 @@ a:hover{
     border: none;
 }
 
-.ModalInfo {
-
+.ModalInfo h2{
+    color: #DE1645;
+    margin-top: -8px;
 }
+
+
 
 .Avatar {
     width: 5rem;
     
 }
 
-.Email {
-
+.Email, .Phone{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: -30px;
+    padding-bottom: 10px;
+    
+}
+.Email img, .Phone img{
+ width: 22px;
+ height: 22px;
+ padding: 0 20px;
 }
 
-.Phone {
-    
+.Phone{
+    align-self: flex-start;
+}
+
+.ModalLine{
+    content: '';
+    width: 90%;
+    height: 1px;
+    background-color: #777;
+
 }
