@@ -36,21 +36,72 @@ a:hover{
     border-radius: 100%;
 }
 
-.AvatarContainer {
-    
+.AvatarContainer h3{
+    margin-top: 0;
+    margin-bottom: 3rem;
 }
 
+.CircleContainer{
+    margin-top: 20px;
+    margin-left: 30%;
+    width:40%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.CircleBgImg img{
+    position: absolute;
+    width: 60%;
+    right:-50px;
+    bottom:0;
+    z-index: -1;
+}
+
+.Modal{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    padding: 20px;
+   
+}
+
+
+.ModalInfo{
+    display: flex;
+    flex-direction: column;
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+.ModalInfo h1{
+    margin: 0;
+}
 .AvatarContainer:hover {
     cursor: pointer;
 }
 
 .ModalAvatar {
-    width: 5rem;
+    position: relative;
+    width: 15rem;
+    height: 15rem;
 
 }
 
 .ModalButton {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border: none;
+    background: none;
+    font-family: "Poppins", sans-serif;
+    cursor: pointer;
+    padding: 5px 10px;
+}
 
+.ModalButton:hover{
+    border: none;
 }
 
 .ModalInfo {
@@ -59,6 +110,7 @@ a:hover{
 
 .Avatar {
     width: 5rem;
+    
 }
 
 .Email {
