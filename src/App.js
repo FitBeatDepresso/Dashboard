@@ -5,14 +5,14 @@ import classes from './App.css';
 
 import { BrowserRouter, Switch, Route, NavLink, Link, Redirect } from "react-router-dom";
 
-import ProtectedRoute from './components/ProtectedRoute';
+import ProtectedRoute from 'components/ProtectedRoute';
 
 // Pages
-import Landing from './pages/Landing/Landing';
-import Welcome from './pages/Welcome/Welcome';
-import Circle from './pages/Circle/Circle';
-import Login from './pages/Login/Login';
-import SignUp from './pages/Login/SignUp';
+import Landing from 'pages/Landing/Landing';
+import Welcome from 'pages/Welcome/Welcome';
+import Circle from 'pages/Circle/Circle';
+import Login from 'pages/Login/Login';
+import SignUp from 'pages/Login/SignUp';
 
 const App = (props) => {
 
