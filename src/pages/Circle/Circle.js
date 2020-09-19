@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, {Component, useEffect} from 'react';
 
 import { NavLink } from "react-router-dom";
 
@@ -13,8 +13,17 @@ import avatar_1 from '../../assets/img/avatar/1.png';
 import avatar_2 from '../../assets/img/avatar/2.png';
 import avatar_3 from '../../assets/img/avatar/3.png';
 import avatar_4 from '../../assets/img/avatar/4.png';
+import {useDispatch, useSelector} from "react-redux";
+import {getConnectionsRequested} from "../../slices/accessSlice";
 
 const Circle = (props) => {
+
+    const connections = useSelector(state => state.access.connections);
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(getConnectionsRequested())
+    }, [])
+    console.log("CONNECTIONS: ", connections);
     return (
         <div>
             <h1> Your Circle </h1>
