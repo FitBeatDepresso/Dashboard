@@ -10,7 +10,8 @@ var userSchema = Schema({
     password: String,
     accessToken: String,
     refreshToken: String,
-    connections: [Schema.Types.ObjectId],
+    moodScore: Number,
+    connections: [{type: Schema.Types.ObjectId, ref: 'User'}],
 })
 
 var User = mongoose.model('User', userSchema);

@@ -51,6 +51,7 @@ passport.use(
         async (email, password, done) => {
             let user = null;
             user = await User.findOne({email});
+            console.log("HERE INSIDDDDE ::: ::: :: ::");
             if(!user){
                 done({type: 'email', message: 'No such user found'}, false);
                 return;
@@ -107,7 +108,7 @@ app.use(session({
 }))
 
 // app.use(cors);
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.use(morgan('combined'))
 app.use(passport.initialize());
 
@@ -125,16 +126,41 @@ app.get('/auth/fitbit/callback', passport.authenticate('fitbit', {
 }))
 
 app.post('/auth/local/login',
-    passport.authenticate('local', { failureRedirect: '/login' }),
+    passport.authenticate('local'),
+    function(req, res) {
+        res.json({
+            user: req.user,
+        })
+});
+
+app.post('/auth/local/signup',
+    passport.authenticate('local.signup'),
     function(req, res) {
         res.redirect('/');
 });
 
-app.post('/auth/local/signup',
-    passport.authenticate('local.signup', { failureRedirect: '/signup' }),
-    function(req, res) {
-        res.redirect('/');
-});
+app.get('/getConnections', (req, res) => {
+    if(req.user){
+        var user = User.findById(req.user.id).populate('connections')
+        res.body = {
+            connections: user.connections,
+        }
+    }
+    else{
+        res.redirect('/login');
+    }
+})
+
+app.post('/addConnections', async (req, res) => {
+    if(req.user){
+        const {email} = req.body;
+        var invitee = await User.findOne({email})
+        await User.findOneAndUpdate({_id: req.user.id}, {$push: {connections: invitee.id}});
+    }
+    else{
+        res.redirect('/login');
+    }
+})
 
 app.use(express.static(path.join(__dirname, '../client/build')));
 app.get('/', function(req, res) {
