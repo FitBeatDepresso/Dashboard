@@ -1,9 +1,8 @@
-import React, { Component, useState } from 'react';
+import React, {Component, useEffect, useState} from 'react';
 
 import { NavLink } from "react-router-dom";
 
 import './Circle.css';
-
 
 import { Avatar, Button } from '@material-ui/core';
 import Modal from 'react-modal';
@@ -16,6 +15,8 @@ import avatar_1 from '../../assets/img/avatar/1.png';
 import avatar_2 from '../../assets/img/avatar/2.png';
 import avatar_3 from '../../assets/img/avatar/3.png';
 import avatar_4 from '../../assets/img/avatar/4.png';
+import {useDispatch, useSelector} from "react-redux";
+import {getConnectionsRequested} from "../../slices/accessSlice";
 
 const customStyles = {
     content: {
@@ -40,6 +41,13 @@ const Circle = (props) => {
     const closeModal = () => {
         setModal(false);
     }
+
+    const connections = useSelector(state => state.access.connections);
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(getConnectionsRequested())
+    }, [])
+    console.log("CONNECTIONS: ", connections);
 
     return (
         <div>
@@ -80,10 +88,10 @@ const Circle = (props) => {
 
             <div className="CircleContainer">
                 <div className="AvatarContainer" onClick={openModal}>
-                    <a href="#">
+                  
                     <img style={{background: "#A2EF8E"}} src={avatar_1}/>
                     <h3> Name </h3>
-                    </a>
+                    
                 </div>
 
                 <div className="AvatarContainer"onClick={openModal}>
@@ -108,7 +116,7 @@ const Circle = (props) => {
             </div>
         </div>
 
-    
+
     );
 }
 
