@@ -17,7 +17,7 @@ const Landing = (props) =>{
             <div> 
                 <div className="Text">
                     <h1> stay connected. </h1>
-                    <h4> Easily check up and see how your loved ones are truly doing, determined by FitBit activity.  </h4>
+                    <h4> Easily check up how your loved ones's mental health, determined by FitBit activity.  </h4>
                     <NavLink style={{textDecoration: "none"}} to="/login"> 
                         <Button color="primary"> Get started </Button>     
                     </NavLink>           
@@ -30,10 +30,10 @@ const Landing = (props) =>{
 
             <div className="Footer"> 
                 <h4 className="FooterText"> Shout out to 
-                <a href=""> Ian </a>,
-                <a href=""> Ayana </a>, and 
-                <a href=""> Kevin </a> for making this project come true - 
-                <a href=""> Chris </a></h4>
+                <a target="_blank" href="https://www.linkedin.com/in/ianp/"> Ian </a>,
+                <a target="_blank" href="https://www.linkedin.com/in/ayana-griffin/"> Ayana </a>, and 
+                <a target="_blank" href="https://www.linkedin.com/in/khluu/"> Kevin </a> for making this project come true - 
+                <a target="_blank" href="https://www.linkedin.com/in/chrislevn/"> Chris </a></h4>
             </div>
         </div>
     );

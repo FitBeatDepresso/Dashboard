@@ -57,6 +57,7 @@ body{
     padding: .5rem 1.8rem;
     letter-spacing: .1px;
     text-transform: none;
+    white-space: nowrap;
     
 }
 
