@@ -158,3 +158,53 @@ a:hover{
     height: 1px;
     background-color: #777;
 }
+
+.Modal p{
+    width: 500px;
+    text-align: center;
+}
+
+.ModalInfo input{
+    background: #f0f0f0;
+   height: 40px;
+   border-radius: 50px;
+   padding: 0 1.5rem;
+   margin: .7rem 3rem;
+   border: none;
+   outline: none;
+   font-family: 'Poppins', sans-serif;
+   font-weight: 500;
+   font-size: 1rem;
+   width: 300px;
+   
+    
+}
+
+.ModalInfo input::placeholder{
+    font-weight: 300;
+    font-size: 1rem;
+    color: #aaa;
+
+}
+.InviteModal{
+    text-align: center;
+}
+
+.ModalInfo Button{
+    color: #fff;
+    background-color: #DE1645;
+    border-radius: 50px;
+    width: 150px;
+    height: 40px;
+    margin: 2rem 1rem;
+    margin-bottom: 0;
+    text-transform: none;
+    font-family: 'Poppins', sans-serif;
+   font-weight: 600;
+   font-size: 1rem;
+    
+}
+.ModalInfo Button:hover{
+    color: #DE1645;
+    background: #fff;
+}

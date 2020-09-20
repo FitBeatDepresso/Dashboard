@@ -90,15 +90,12 @@ const Circle = (props) => {
 
                         <h3> Reach out to {showIndex < 0 ? "" : connections[showIndex].fullName} </h3>
                         <div className="Email">
-                            {/* Remember to insert email logo */}
                             <img src={mailImg} />
                             <a> {showIndex < 0 ? "" : connections[showIndex].email} </a>
-                            {/* <img src={mailImg} /> */}
                         </div>
 
                         <div className="Phone">
                             <img src={phoneImg} />
-                            {/* Remember to insert phone logo */}
                             <a> +1 234 567 8910  </a>
 
                         </div>
@@ -112,11 +109,13 @@ const Circle = (props) => {
                 style={customStyles}
                 contentLabel="Example Modal"
             >
-                <div className="Modal">
+                <div className="Modal InviteModal">
                     <button className="ModalButton" onClick={closeInvitationModal}> Close </button>
 
                     <div className="ModalInfo">
-
+                        <h1>Invite Friends</h1>
+                        <p>Invite your friends and family members to join FitBeatDepresso! You'll be able to see each other's mood scores and easily check up on each other, no matter how far away you physically may be.</p>
+                        <h4>Enter their email to have them join your circle!</h4>
                         <FormControl>
                             <input placeholder="Email address" onChange={(evt) => setEmail(evt.target.value)}></input>
                         </FormControl>
