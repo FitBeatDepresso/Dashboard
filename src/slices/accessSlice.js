@@ -8,6 +8,7 @@ const accessSlice = createSlice({
             isAuthenticated: typeof Cookies.get('auth__flow__fitbeatdepresso__loggedUserObj') !== 'undefined',
             loggedUserObj: Cookies.getJSON('auth__flow__fitbeatdepresso__loggedUserObj'),
             connections: [],
+            userProfile: null,
         },
         error: null,
     },
@@ -23,8 +24,7 @@ const accessSlice = createSlice({
         },
         profileSucceeded(state, action) {
             state.user = {
-                isAuthenticated: true,
-                loggedUserObj: action.payload,
+                userProfile: action.payload,
             }
         },
         profileFailed(state, action) {

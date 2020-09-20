@@ -1,4 +1,4 @@
-import {watchSignup, watchLogout, watchLogin, watchGetConnections, watchAddConnection} from "./accessSaga";
+import {watchSignup, watchLogout, watchLogin, watchGetConnections, watchAddConnection, watchGetOwnProfile} from "./accessSaga";
 import {all, fork} from 'redux-saga/effects';
 
 export default function* rootSaga(){
@@ -8,5 +8,6 @@ export default function* rootSaga(){
         fork(watchSignup),
         fork(watchGetConnections),
         fork(watchAddConnection),
+        fork(watchGetOwnProfile),
     ])
 }

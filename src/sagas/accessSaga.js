@@ -130,3 +130,16 @@ function* addConnection(action) {
 export function* watchAddConnection() {
     yield takeLatest(addConnectionRequested.toString(), addConnection);
 }
+
+function* getOwnProfile(){
+    try{
+        const response = yield get(`${url}/getOwnProfile`);
+        yield put(profileSucceeded(response.user));
+    } catch(e){
+        console.log("ERROR FETCHING PROFILE")
+    }
+}
+
+export function* watchGetOwnProfile(){
+    yield takeLatest(profileRequested.toString(), getOwnProfile);
+}
