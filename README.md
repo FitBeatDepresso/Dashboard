@@ -51,10 +51,12 @@ The product will fetch user's health data from Fitbit, predict their mood score 
 - Develop a mobile version for FitBeat Depresso
 
 ## Special thanks to: 
-@chrislevn 
-@ayanagriffin
-@iperez333
-@khluu
+<p align="left">  
+     <a target="_blank" href="https://github.com/chrislevn"> Christopher Le </a></br>
+     <a target="_blank" href="https://github.com/ayanagriffin"> Ayana Griffin </a></br>
+     <a target="_blank" href="https://github.com/iperez319"> Ian Perez </a></br>
+     <a target="_blank" href="https://github.com/khluu"> Kevin H. Luu </a></br>
+</p>
 
 ## Notices
 1. If you want to test the product at this moment, please use the link with Firefox private mode. We will improve the product to make it accessible on any web browsers
