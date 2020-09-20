@@ -6,7 +6,7 @@
 <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
 </p>
 
-#### Link: https://fit-beat-depresso.herokuapp.com/
+#### Link: https://fit-beat-depresso.herokuapp.com/ [1]
 
 ## Overview: 
 A platform that helps predict and check your loved ones' mental health with Fitbit API. 
@@ -15,6 +15,8 @@ A platform that helps predict and check your loved ones' mental health with Fitb
 ## How it works
 
 The product will fetch user's health data from Fitbit, predict their mood score with Machine Learning, and finally update the score within the user's circle of closed friends. When someone gets trouble (stress, depression), the product will notify other users to reach out to the one in need. 
+
+![](https://i.imgur.com/Pr2Twz8.png)
 
 ### Tutorial:
 1. Clone https://github.com/FitBeatDepresso/Server
@@ -48,3 +50,9 @@ The product will fetch user's health data from Fitbit, predict their mood score 
 @ayanagriffin
 @iperez333
 @khluu
+
+## Notices
+1. If you want to test the product at this moment, please use the link with Firefox private mode. We will improve the product to make it accessible on any web browsers
+  
+    a. Test email: iancarloperez@gmail.com - test password: 1234567890
+    b. Test invite friends: test2@gmail.com
