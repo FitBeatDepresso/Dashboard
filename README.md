@@ -19,7 +19,7 @@ A platform that helps predict and check your loved ones' mental health with Fitb
 
 The product will fetch user's health data from Fitbit, predict their mood score with Machine Learning, and finally update the score within the user's circle of closed friends. When someone gets trouble (stress, depression), the product will notify other users to reach out to the one in need. 
 
-Demo gif:
+### Demo gif: 
 
 ![](https://i.imgur.com/GHrMHcT.gif)
 
