@@ -20,7 +20,10 @@ const Header = (props) => {
                     <NavLink style={{textDecoration: "none"}} to="/login"> 
                         <Button color="primary" style={{color: "#DE1645", textTransform: "capitalize", fontWeight: "bold", background:"transparent", border: "3px solid #DE1645", borderRadius: "50px", width:"8rem"}}> Login </Button>
                     </NavLink>
+
+                    <NavLink style={{textDecoration: "none"}} to="/signup"> 
                     <Button color="primary" style={{color: "#fff", marginLeft:"1rem", textTransform: "capitalize", fontWeight: "bold", background:"#DE1645", border: "1px solid #DE1645", borderRadius: "50px", width:"8rem"}}> Sign Up </Button>
+                    </NavLink>
                 </div>
             </nav> 
         </header>

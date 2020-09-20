@@ -25,7 +25,7 @@ const Login = (props) => {
         dispatch(loginRequested({ email, password }));
     }
 
-    const fitbit_authencation_url = "https://www.fitbit.com/oauth2/authorize?response_type=token&client_id=22BRXL&redirect_uri=http%3A%2F%2F127.0.0.1%3A3000%2Fwelcome&scope=activity%20heartrate%20location%20nutrition%20profile%20settings%20sleep%20social%20weight&expires_in=604800"; 
+    const fitbit_authencation_url = "https://www.fitbit.com/oauth2/authorize?response_type=token&client_id=22BRXL&redirect_uri=https%3A%2F%2Ffit-beat-depresso.herokuapp.com%2Fwelcome&scope=activity%20heartrate%20location%20nutrition%20profile%20settings%20sleep%20social%20weight&expires_in=604800"; 
     
     return (
         <div>

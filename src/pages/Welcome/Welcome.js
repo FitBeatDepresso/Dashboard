@@ -8,7 +8,6 @@ import './Welcome.css';
 
 // Assests
 import welcomeImg from '../../assets/img/welcomePage/welcome.png';
-import avatar_4 from '../../assets/img/avatar/4.png'
 
 const customStyles = {
     content : {
@@ -29,7 +28,7 @@ const Welcome = (props) => {
     const [avatar, setAvatar] = useState('');
     const [moodScore, setMoodScore] = useState(0); 
     const [modalOpen, setModal] = useState(false); 
-
+    
     var tempScore = 0; 
 
     const openModal = () => { 
@@ -46,8 +45,8 @@ const Welcome = (props) => {
     }
 
     const updateModal = () => { 
-
         closeModal();
+        setMoodScore(tempScore);
     }
 
     const handleKeyDown = (e) => {
@@ -62,50 +61,50 @@ const Welcome = (props) => {
     }
 
 
-    useEffect(() => {
-        // // get the url 
-        var url = window.location.href;
-        // //getting the access token from url 
-        var access_token = url.split("#")[1].split("=")[1].split("&")[0]; 
-        // // get the userid 
-        var userId = url.split("#")[1].split("=")[2].split("&")[0]; 
+    // useEffect(() => {
+    //     // // get the url 
+    //     var url = window.location.href;
+    //     // //getting the access token from url 
+    //     var access_token = url.split("#")[1].split("=")[1].split("&")[0]; 
+    //     // // get the userid 
+    //     var userId = url.split("#")[1].split("=")[2].split("&")[0]; 
 
-        console.log("Access token: " + access_token); 
-        console.log("User ID: " + userId); 
+    //     console.log("Access token: " + access_token); 
+    //     console.log("User ID: " + userId); 
 
-        var xhr_sleep = new XMLHttpRequest();
-        xhr_sleep.open('GET', 'https://api.fitbit.com/1/user/' + userId + '/sleep/date/today.json');
-        xhr_sleep.setRequestHeader("Authorization", 'Bearer ' + access_token);
-        xhr_sleep.onload = function () {
-            if (xhr_sleep.status === 200) {
-                console.log(xhr_sleep.responseText); 
+    //     var xhr_sleep = new XMLHttpRequest();
+    //     xhr_sleep.open('GET', 'https://api.fitbit.com/1/user/' + userId + '/sleep/date/today.json');
+    //     xhr_sleep.setRequestHeader("Authorization", 'Bearer ' + access_token);
+    //     xhr_sleep.onload = function () {
+    //         if (xhr_sleep.status === 200) {
+    //             console.log(xhr_sleep.responseText); 
 
-                var sleep_data = JSON.parse(xhr_sleep.responseText); 
+    //             var sleep_data = JSON.parse(xhr_sleep.responseText); 
                 
-                var timeInBed = sleep_data.summary.totalTimeInBed;
+    //             var timeInBed = sleep_data.summary.totalTimeInBed;
 
-                console.log(timeInBed);
-            }
-        };
-        xhr_sleep.send()
+    //             console.log(timeInBed);
+    //         }
+    //     };
+    //     xhr_sleep.send()
 
-        var xhr_profile = new XMLHttpRequest();
-        xhr_profile.open('GET', 'https://api.fitbit.com/1/user/' + userId + '/profile.json');
-        xhr_profile.setRequestHeader("Authorization", 'Bearer ' + access_token);
-        xhr_profile.onload = function () {
-            if (xhr_profile.status === 200) {
+    //     var xhr_profile = new XMLHttpRequest();
+    //     xhr_profile.open('GET', 'https://api.fitbit.com/1/user/' + userId + '/profile.json');
+    //     xhr_profile.setRequestHeader("Authorization", 'Bearer ' + access_token);
+    //     xhr_profile.onload = function () {
+    //         if (xhr_profile.status === 200) {
 
-                var profile_data = JSON.parse(xhr_profile.responseText);
-                console.log(xhr_profile.responseText);
+    //             var profile_data = JSON.parse(xhr_profile.responseText);
+    //             console.log(xhr_profile.responseText);
 
-                setName(profile_data.user.fullName);
-                setAvatar(profile_data.user.avatar);
+    //             setName(profile_data.user.fullName);
+    //             setAvatar(profile_data.user.avatar);
                 
-            }
-        };
-        xhr_profile.send()
+    //         }
+    //     };
+    //     xhr_profile.send()
 
-    })
+    // })
 
     return (
         <div>
