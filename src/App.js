@@ -24,8 +24,8 @@ const App = (props) => {
         <Switch>
           <Route path="/" exact component={Landing} />
           <Route path="/welcome" component={Welcome} />
-          <Route path="/login" render={() => isAuthenticated ? <Redirect to={'/circle'}/> : <Login/>} />
-          <Route path="/signup" render={() => isAuthenticated ? <Redirect to={'/circle'}/> : <SignUp/>}/>
+          <Route path="/login" render={() => isAuthenticated ? <Redirect to={'/welcome'}/> : <Login/>} />
+          <Route path="/signup" render={() => isAuthenticated ? <Redirect to={'/welcome'}/> : <SignUp/>}/>
           <Route path='/inviteFriends' component={InviteFriends}/>
           <Route path="/circle" component={Circle} />
         </Switch>

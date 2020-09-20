@@ -66,6 +66,7 @@ const Welcome = (props) => {
         console.log(tempScore);
     }
 
+    const dispatch = useDispatch()
 
     useEffect(() => {
         dispatch(profileRequested())
