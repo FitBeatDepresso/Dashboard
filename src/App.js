@@ -23,7 +23,8 @@ const App = (props) => {
       <BrowserRouter>
         <Switch>
           <Route path="/" exact component={Landing} />
-          <ProtectedRoute path="/welcome" component={Welcome} />
+          <Route path="/welcome" component={Welcome} />
+          {/* <ProtectedRoute path="/welcome" component={Welcome} /> */}
           <Route path="/login" render={() => isAuthenticated ? <Redirect to={'/circle'}/> : <Login/>} />
           <Route path="/signup" render={() => isAuthenticated ? <Redirect to={'/circle'}/> : <SignUp/>}/>
           <Route path='/inviteFriends' component={InviteFriends}/>

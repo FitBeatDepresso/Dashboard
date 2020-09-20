@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "@material-ui/core": "^4.11.0",
+    "@material-ui/icons": "^4.9.1",
+    "@material/react-material-icon": "^0.15.0",
     "@reduxjs/toolkit": "^1.4.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -11,6 +13,7 @@
     "axios": "^0.20.0",
     "js-cookie": "^2.2.1",
     "react": "^16.13.1",
+    "react-burger-menu": "^2.7.1",
     "react-dom": "^16.13.1",
     "react-mailto": "^0.4.0",
     "react-modal": "^3.11.2",

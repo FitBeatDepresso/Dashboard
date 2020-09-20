@@ -7,6 +7,7 @@ import Modal from 'react-modal';
 import './Welcome.css'; 
 
 // Assests
+import SideBar from '../../components/SideBar/SideBar';
 import welcomeImg from '../../assets/img/welcomePage/welcome.png';
 
 const customStyles = {
@@ -60,6 +61,10 @@ const Welcome = (props) => {
         console.log(tempScore);
     }
 
+    const handleOnOpen = () => {
+
+    }
+
 
     // useEffect(() => {
     //     // // get the url 
@@ -107,48 +112,52 @@ const Welcome = (props) => {
     // })
 
     return (
-        <div>
-            <div className="Info">
-            <div className="InfoContainer">
-                <img className="Avatar" src={avatar}/>
-                <h1> Welcome, {name}! </h1>
-                <h2 ref={_subtitle => (subtitle = _subtitle)} > Your mood score: {moodScore}/10 </h2>
+        <div id="App">
+            <SideBar pageWrapId={"page-wrap"} outerContainerId={"App"} />
+            <div id="page-wrap"> 
+            
+                <div  className="Info">
+                    
+                    <div className="InfoContainer">
+                        <img className="Avatar" src={avatar}/>
+                        <h1> Welcome, {name}! </h1>
+                        <h2 ref={_subtitle => (subtitle = _subtitle)} > Your mood score: {moodScore}/10 </h2>
 
-                <a className="Manual" onClick={openModal}> 
-                    enter score manually  
-                </a>
-                <NavLink to="/circle"> 
-                    <Button> Check on your circle </Button>
-                </NavLink>
+                        <a className="Manual" onClick={openModal}> 
+                            enter score manually  
+                        </a>
+                        <NavLink to="/circle"> 
+                            <Button> Check on your circle </Button>
+                        </NavLink>
+                    </div>
                 </div>
-            </div>
-
-            <Modal
-                isOpen={modalOpen}
-                onAfterOpen={afterOpenModal}
-                onRequestClose={closeModal}
-                style={customStyles}
-                contentLabel="Example Modal"
-            >
                 
-                <Button onClick={closeModal}> Close Modal </Button>
-                <form noValidate autoComplete="off">
-                <input 
-                    id="my-input" 
-                    placeholder="Manually enter your mood score" 
-                    aria-describedby="my-helper-text" 
-                    onKeyDown={handleKeyDown}
-                    onChange={handleChange}
-                    // ref={(score) => tempScore = score }
-                />
-                </form>
-                <Button onClick={updateModal}> Done </Button>
+                    <Modal
+                        isOpen={modalOpen}
+                        onAfterOpen={afterOpenModal}
+                        onRequestClose={closeModal}
+                        style={customStyles}
+                        contentLabel="Example Modal"
+                    >
+                        
+                        <Button onClick={closeModal}> Close Modal </Button>
+                        <form noValidate autoComplete="off">
+                        <input 
+                            id="my-input" 
+                            placeholder="Manually enter your mood score" 
+                            aria-describedby="my-helper-text" 
+                            onKeyDown={handleKeyDown}
+                            onChange={handleChange}
+                            // ref={(score) => tempScore = score }
+                        />
+                        </form>
+                        <Button onClick={updateModal}> Done </Button>
 
-            </Modal>
-
-
-            <div className="ImgContainer"> 
-                <img className="Img" src={welcomeImg}/>
+                    </Modal>
+                <div className="ImgContainer"> 
+                    <img className="Img" src={welcomeImg}/>
+                </div>
+                
             </div>
         </div>
     );

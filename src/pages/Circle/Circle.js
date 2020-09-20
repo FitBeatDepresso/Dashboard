@@ -18,6 +18,8 @@ import avatar_4 from '../../assets/img/avatar/4.png';
 import {useDispatch, useSelector} from "react-redux";
 import {addConnectionRequested, getConnectionsRequested} from "../../slices/accessSlice";
 
+import SideBar from '../../components/SideBar/SideBar'; 
+
 const customStyles = {
     content: {
         top: '50%',
@@ -70,8 +72,10 @@ const Circle = (props) => {
     }
 
     return (
-        <div>
-             <h1 style={{marginBottom: "0"}}> Your Circle </h1>
+        <div id="Circle"> 
+            <SideBar pageWrapId={"page-wrap-circle"} outerContainerId={"Circle"} />
+            <div id="page-wrap-circle"> 
+                <h1 style={{marginBottom: "0"}}> Your Circle </h1>
                 <a onClick={() => setInvitationModal(true)}> Invite friends </a>
             <Modal
                 isOpen={modalOpen}
@@ -124,41 +128,42 @@ const Circle = (props) => {
                 </div>
             </Modal>
 
-            <div className="CircleContainer">
-                {
-                    (connections || []).map((item, index) => {
-                        return(<div className="AvatarContainer" onClick={() => openModal(index)}>
-                            <img style={{background: "#A2EF8E"}} src={images[index % images.length]}/>
-                            <h3>{item.fullName}</h3>
-                        </div>)
-                    })
-                }
-                {/*<div className="AvatarContainer" onClick={openModal}>*/}
-                {/*  */}
-                {/*    <img style={{background: "#A2EF8E"}} src={avatar_1}/>*/}
-                {/*    <h3> Name </h3>*/}
-                {/*    */}
-                {/*</div>*/}
+                <div className="CircleContainer">
+                    {
+                        (connections || []).map((item, index) => {
+                            return(<div className="AvatarContainer" onClick={() => openModal(index)}>
+                                <img style={{background: "#A2EF8E"}} src={images[index % images.length]}/>
+                                <h3>{item.fullName}</h3>
+                            </div>)
+                        })
+                    }
+                    {/*<div className="AvatarContainer" onClick={openModal}>*/}
+                    {/*  */}
+                    {/*    <img style={{background: "#A2EF8E"}} src={avatar_1}/>*/}
+                    {/*    <h3> Name </h3>*/}
+                    {/*    */}
+                    {/*</div>*/}
 
-                {/*<div className="AvatarContainer"onClick={openModal}>*/}
-                {/*    <img style={{background: "#F7ED99"}} src={avatar_2}/>*/}
-                {/*    <h3> Name </h3>*/}
-                {/*</div>*/}
+                    {/*<div className="AvatarContainer"onClick={openModal}>*/}
+                    {/*    <img style={{background: "#F7ED99"}} src={avatar_2}/>*/}
+                    {/*    <h3> Name </h3>*/}
+                    {/*</div>*/}
 
-                {/*<div className="AvatarContainer"onClick={openModal}>*/}
-                {/*    <img style={{background: "#FF5A5A"}} src={avatar_3}/>*/}
-                {/*    <h3> Name </h3>*/}
-                {/*    /!* <h3> It looks like "" may not be doing well today <a href="#"> Reach out? </a> </h3> *!/*/}
-                {/*</div>*/}
+                    {/*<div className="AvatarContainer"onClick={openModal}>*/}
+                    {/*    <img style={{background: "#FF5A5A"}} src={avatar_3}/>*/}
+                    {/*    <h3> Name </h3>*/}
+                    {/*    /!* <h3> It looks like "" may not be doing well today <a href="#"> Reach out? </a> </h3> *!/*/}
+                    {/*</div>*/}
 
-                {/*<div className="AvatarContainer"onClick={openModal}>*/}
-                {/*    <img style={{background: "#A2EF8E"}} src={avatar_4}/>*/}
-                {/*    <h3> Name </h3>*/}
-                {/*</div>*/}
+                    {/*<div className="AvatarContainer"onClick={openModal}>*/}
+                    {/*    <img style={{background: "#A2EF8E"}} src={avatar_4}/>*/}
+                    {/*    <h3> Name </h3>*/}
+                    {/*</div>*/}
 
-            </div>
-            <div className="CircleBgImg">
-            <img src={circleImg}/>
+                </div>
+                <div className="CircleBgImg">
+                <img src={circleImg}/>
+                </div>
             </div>
         </div>
 
