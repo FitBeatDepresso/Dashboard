@@ -13,6 +13,7 @@ import Welcome from 'pages/Welcome/Welcome';
 import Circle from 'pages/Circle/Circle';
 import Login from 'pages/Login/Login';
 import SignUp from 'pages/Login/SignUp';
+import InviteFriends from "./pages/InviteFriends";
 
 const App = (props) => {
 
@@ -22,11 +23,10 @@ const App = (props) => {
       <BrowserRouter>
         <Switch>
           <Route path="/" exact component={Landing} />
-          <Route path="/welcome" component={Welcome} />
-
-          {/* <ProtectedRoute path="/welcome" component={Welcome} /> */}
-          <Route path="/login" render={() => isAuthenticated ? <Redirect to={'/welcome'}/> : <Login/>} />
-          <Route path="/signup" render={() => isAuthenticated ? <Redirect to={'/welcome'}/> : <SignUp/>}/>
+          <ProtectedRoute path="/welcome" component={Welcome} />
+          <Route path="/login" render={() => isAuthenticated ? <Redirect to={'/circle'}/> : <Login/>} />
+          <Route path="/signup" render={() => isAuthenticated ? <Redirect to={'/circle'}/> : <SignUp/>}/>
+          <Route path='/inviteFriends' component={InviteFriends}/>
           <Route path="/circle" component={Circle} />
         </Switch>
       </BrowserRouter>

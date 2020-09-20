@@ -115,6 +115,7 @@ function* addConnection(action) {
 
         yield call(post, `${url}/addConnection`, {email});
         console.log("SUCCEEDED")
+        yield put(getConnectionsRequested());
     } catch (error) {
         console.log("ERROR AddConnection")
         console.log(error)
