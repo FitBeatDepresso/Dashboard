@@ -110,7 +110,7 @@ const Circle = (props) => {
                 contentLabel="Example Modal"
             >
                 <div className="Modal">
-                    <button className="ModalButton" onClick={closeModal}> Close </button>
+                    <button className="ModalButton" onClick={closeInvitationModal}> Close </button>
 
                     <div className="ModalInfo">
 
