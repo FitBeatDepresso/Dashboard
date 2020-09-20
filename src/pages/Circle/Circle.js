@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 import './Circle.css';
 
-import { Avatar, Button } from '@material-ui/core';
+import {Avatar, Button, FormControl} from '@material-ui/core';
 import Modal from 'react-modal';
 
 // Assets
@@ -16,7 +16,7 @@ import avatar_2 from '../../assets/img/avatar/2.png';
 import avatar_3 from '../../assets/img/avatar/3.png';
 import avatar_4 from '../../assets/img/avatar/4.png';
 import {useDispatch, useSelector} from "react-redux";
-import {getConnectionsRequested} from "../../slices/accessSlice";
+import {addConnectionRequested, getConnectionsRequested} from "../../slices/accessSlice";
 
 const customStyles = {
     content: {
@@ -32,6 +32,8 @@ const customStyles = {
 const Circle = (props) => {
 
     const [modalOpen, setModal] = useState(false);
+    const [modalInvitationOpen, setInvitationModal] = useState(false);
+    const [email, setEmail] = useState('');
     const [showIndex, setShowIndex] = useState(-1);
 
     const openModal = (index) => {
@@ -44,6 +46,14 @@ const Circle = (props) => {
         setShowIndex(-1);
     }
 
+    const openInvitationModal = () => {
+        setInvitationModal(true);
+    }
+
+    const closeInvitationModal = () => {
+        setInvitationModal(false);
+    }
+
     const connections = useSelector(state => state.access.connections);
     const dispatch = useDispatch();
 
@@ -54,13 +64,15 @@ const Circle = (props) => {
     }, [])
     console.log("CONNECTIONS: ", connections);
 
+    const addInviteHandler = () => {
+        dispatch(addConnectionRequested({email}))
+        setInvitationModal(false);
+    }
+
     return (
         <div>
              <h1 style={{marginBottom: "0"}}> Your Circle </h1>
-            <NavLink style={{textDecoration: "none"}} to="/inviteFriends">
-                <a> Invite friends </a>
-            </NavLink>
-
+                <a onClick={() => setInvitationModal(true)}> Invite friends </a>
             <Modal
                 isOpen={modalOpen}
                 onRequestClose={closeModal}
@@ -87,6 +99,25 @@ const Circle = (props) => {
                             <a> +1 234 567 8910  </a>
 
                         </div>
+                    </div>
+                </div>
+            </Modal>
+
+            <Modal
+                isOpen={modalInvitationOpen}
+                onRequestClose={closeInvitationModal}
+                style={customStyles}
+                contentLabel="Example Modal"
+            >
+                <div className="Modal">
+                    <button className="ModalButton" onClick={closeModal}> Close </button>
+
+                    <div className="ModalInfo">
+
+                        <FormControl>
+                            <input placeholder="Email address" onChange={(evt) => setEmail(evt.target.value)}></input>
+                        </FormControl>
+                        <Button onClick={addInviteHandler}>Submit</Button>
                     </div>
                 </div>
             </Modal>
