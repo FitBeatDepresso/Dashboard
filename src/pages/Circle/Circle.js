@@ -86,15 +86,18 @@ const Circle = (props) => {
                     <div className="ModalInfo">
                         <h1> {showIndex < 0 ? "" : connections[showIndex].fullName} </h1>
                         <h2> Mood score: {showIndex < 0 ? 0 : connections[showIndex].moodScore}/10 </h2>
+                        <div className="ModalLine"></div>
 
                         <h3> Reach out to {showIndex < 0 ? "" : connections[showIndex].fullName} </h3>
                         <div className="Email">
                             {/* Remember to insert email logo */}
+                            <img src={mailImg} />
                             <a> {showIndex < 0 ? "" : connections[showIndex].email} </a>
                             {/* <img src={mailImg} /> */}
                         </div>
 
                         <div className="Phone">
+                            <img src={phoneImg} />
                             {/* Remember to insert phone logo */}
                             <a> +1 234 567 8910  </a>
 

@@ -148,10 +148,13 @@ a:hover{
     align-self: flex-start;
 }
 
+.Email{
+    align-self: flex-start;
+}
+
 .ModalLine{
     content: '';
     width: 90%;
     height: 1px;
     background-color: #777;
-
 }
