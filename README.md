@@ -13,13 +13,14 @@
 
 ## Overview: 
 A platform that helps predict and check your loved ones' mental health with Fitbit API. 
-
+![](https://i.imgur.com/Pr2Twz8.png)
 
 ## How it works
 
 The product will fetch user's health data from Fitbit, predict their mood score with Machine Learning, and finally update the score within the user's circle of closed friends. When someone gets trouble (stress, depression), the product will notify other users to reach out to the one in need. 
 
-![](https://i.imgur.com/Pr2Twz8.png)
+Demo gif:
+![](https://i.imgur.com/GHrMHcT.gif)
 
 ### Tutorial:
 1. Clone https://github.com/FitBeatDepresso/Server
