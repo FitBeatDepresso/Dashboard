@@ -18,7 +18,7 @@ import avatar_4 from '../../assets/img/avatar/4.png';
 import {useDispatch, useSelector} from "react-redux";
 import {addConnectionRequested, getConnectionsRequested} from "../../slices/accessSlice";
 
-import SideBar from '../../components/SideBar/SideBar'; 
+import SideBar from '../../components/SideBar/SideBar';
 
 const customStyles = {
     content: {
@@ -72,9 +72,8 @@ const Circle = (props) => {
     }
 
     return (
-        <div id="Circle"> 
-            <SideBar pageWrapId={"page-wrap-circle"} outerContainerId={"Circle"} />
-            <div id="page-wrap-circle"> 
+        <div id="Circle">
+            <div id="page-wrap-circle">
                 <h1 style={{marginBottom: "0"}}> Your Circle </h1>
                 <a onClick={() => setInvitationModal(true)}> Invite friends </a>
             <Modal
@@ -89,7 +88,7 @@ const Circle = (props) => {
 
                     <div className="ModalInfo">
                         <h1> {showIndex < 0 ? "" : connections[showIndex].fullName} </h1>
-                        <h2> Mood score: {showIndex < 0 ? 0 : connections[showIndex].moodScore}/10 </h2>
+                        <h2> Mood score: {showIndex < 0 ? 0 : connections[showIndex].moodScore}/5 </h2>
                         <div className="ModalLine"></div>
 
                         <h3> Reach out to {showIndex < 0 ? "" : connections[showIndex].fullName} </h3>

@@ -7,7 +7,7 @@ import Modal from 'react-modal';
 import './Welcome.css';
 
 // Assests
-import SideBar from '../../components/SideBar/SideBar';
+// import SideBar from '../../components/SideBar/SideBar';
 import welcomeImg from '../../assets/img/welcomePage/welcome.png';
 import avatar_4 from '../../assets/img/avatar/4.png'
 import {useDispatch, useSelector} from "react-redux";
@@ -117,15 +117,14 @@ const Welcome = (props) => {
     // })
 
     return (
-        <div id='App'>
-            <SideBar pageWrapId={'page-wrap'} outerContainerId={'App'}/>
-            <div id={'page-wrap'}>
+        <div>
+            {/*<SideBar pageWrapId={'page-wrap'} outerContainerId={'App'}/>*/}
             <div className="Info">
                 { user ?
             <div className="InfoContainer">
                 <img className="Avatar" src={avatar_4}/>
                 <h1> Welcome, {user.fullName}! </h1>
-                <h2 ref={_subtitle => (subtitle = _subtitle)} > Your mood score: {user.moodScore}/10 </h2>
+                <h2 ref={_subtitle => (subtitle = _subtitle)} > Your mood score: {user.moodScore}/5 </h2>
 
                 <a className="Manual" onClick={openModal}>
                     enter score manually
@@ -162,7 +161,6 @@ const Welcome = (props) => {
 
             <div className="ImgContainer">
                 <img className="Img" src={welcomeImg}/>
-            </div>
             </div>
         </div>
     );
