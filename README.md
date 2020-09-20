@@ -5,7 +5,6 @@
 </h1>
 
 <p align="center">  
-
 <a><img src="https://img.shields.io/github/stars/FitBeatDepresso?label=Organization%20Stars&style=social"></a>     
 <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/license-MIT-blue.svg"></a>
 </p>
