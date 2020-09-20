@@ -48,7 +48,7 @@ const Login = (props) => {
 
                 <div className="Button">
                     <Button color="primary" onClick={loginHandler}> Sign In </Button>
-                    <Button color="primary" onClick={window.open(fitbit_authencation_url)} > Connect with Fitbit</Button>
+                    {/* <Button color="primary" onClick={window.open(fitbit_authencation_url)} > Connect with Fitbit</Button> */}
                 </div>
 
                 <h2> Don't have an account?
