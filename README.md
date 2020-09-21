@@ -55,3 +55,5 @@ The product will fetch user's health data from Fitbit, predict their mood score 
     a. Test email: iancarloperez@gmail.com - test password: 1234567890
     
     b. Test invite friends: test2@gmail.com
+    
+2. The server repo is set in private right now for privacy concern
