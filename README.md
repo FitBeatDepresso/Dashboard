@@ -12,6 +12,11 @@
 #### Link: https://fit-beat-depresso.herokuapp.com/ [1]
 
 ## Overview: 
+
+👉 No more having to go to the app everyday to report your feeling like most mental health app on the market. 
+
+👉 No more being afraid to speak up your feelings because now your loved ones can acknowledge your stress and reach out to you. 
+
 A platform that helps predict and check your loved ones' mental health with Fitbit API. 
 ![](https://i.imgur.com/Pr2Twz8.png)
 
