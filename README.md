@@ -13,9 +13,13 @@
 
 ## Overview: 
 
-👉 No more having to go to the app everyday to report your feeling like most mental health app on the market. 
+👉  Ever feel inconvenient having to report your feeling to nowadays' mental health app on the market. </br>
+👉  Ever feel shy talking to your family/close friends about your stress but wish that they reach out to you. </br>
+👉  Ever been a stressful international student. You want to let your parents know your feelings but at the same time, you're afraid to speak up. </br>
 
-👉 No more being afraid to speak up your feelings because now your loved ones can acknowledge your stress and reach out to you. 
+That's what I have been through and for the past 1 years, I have been searching for the optimal solution for this problem - solving mental health with the help of AI. I have looked at ambitious projects like NLP sentimental analysis với twitter post, emotion recognition with computer vision but none of them works for depressed people in real life. That's how now I </br>
+
+Introduce FitBeat Depresso. 
 
 A platform that helps predict and check your loved ones' mental health with Fitbit API. 
 ![](https://i.imgur.com/Pr2Twz8.png)
