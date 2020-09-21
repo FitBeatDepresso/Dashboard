@@ -22,14 +22,6 @@ The product will fetch user's health data from Fitbit, predict their mood score 
 ### Demo gif: 
 
 ![](https://i.imgur.com/GHrMHcT.gif)
-
-### Tutorial:
-     a. open console 
-     
-     b. `npm install` to install necessary libraries
-     
-     c.`npm start` to run the site 
-     
      
 ## Why FitBeat Depreso: 
 1. FitBeat Depresso is more convenient with automatic syncing, mood score's preduction, and notification. 
