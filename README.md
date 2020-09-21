@@ -24,16 +24,6 @@ The product will fetch user's health data from Fitbit, predict their mood score 
 ![](https://i.imgur.com/GHrMHcT.gif)
 
 ### Tutorial:
-1. Clone https://github.com/FitBeatDepresso/Server
-
-     a. open console 
-     
-     b. `npm install` to install necessary libraries
-     
-     c.`npm start` to run the server 
-     
-2. To run the webite: 
-
      a. open console 
      
      b. `npm install` to install necessary libraries
